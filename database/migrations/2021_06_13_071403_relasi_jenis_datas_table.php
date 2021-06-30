@@ -13,7 +13,7 @@ class RelasiJenisDatasTable extends Migration
      */
     public function up()
     {
-        schema::table('datas', function (Blueprint $table){
+        Schema::table('datas', function (Blueprint $table){
             $table->unsignedBigInteger('jenis_id')->nullable(); //Menambahkan kolom jenis_id
             $table->foreign('jenis_id')->references('id')->on('jenis'); //Menambahkan foreign key di kolom kelas_id
 
